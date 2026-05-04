@@ -1,0 +1,259 @@
+.data-section {
+  min-height: 100vh;
+  padding: 120px 70px 110px;
+  background:
+    radial-gradient(circle at 80% 15%, rgba(199, 241, 44, 0.07), transparent 26%),
+    radial-gradient(circle at 12% 75%, rgba(141, 76, 27, 0.16), transparent 28%),
+    linear-gradient(180deg, #030905 0%, #071009 46%, #030905 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.018),
+    rgba(255,255,255,0.018) 1px,
+    transparent 1px,
+    transparent 120px
+  );
+  pointer-events: none;
+}
+
+.data-title {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(56px, 8vw, 126px);
+  line-height: 0.86;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  max-width: 920px;
+  margin: 18px 0 46px;
+}
+
+.data-title span {
+  color: #c7f12c;
+}
+
+.data-stage {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.data-panel {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 32px;
+  padding: 30px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018)),
+    rgba(5, 14, 7, 0.9);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.38);
+  min-height: 520px;
+}
+
+.data-panel h3 {
+  margin: 0 0 22px;
+  font-size: 40px;
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.data-caption {
+  color: rgba(243,239,231,0.45);
+  line-height: 1.7;
+  font-size: 16px;
+  margin: 0;
+}
+
+.metric-tabs {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.metric-tab {
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.025);
+  color: rgba(243,239,231,0.45);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.metric-tab:hover,
+.metric-tab.active {
+  transform: translateX(8px);
+  color: #c7f12c;
+  border-color: rgba(199,241,44,0.28);
+  background: rgba(199,241,44,0.06);
+}
+
+.metric-tab strong {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.metric-tab span {
+  font-size: 22px;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+
+/* ========================= */
+/* ðŸ”¥ FIXED SCROLL SYSTEM */
+/* ========================= */
+
+.ranking-board {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 32px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(199,241,44,0.09), transparent 26%),
+    rgba(255,255,255,0.025);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.32);
+
+  height: 620px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.board-header h3 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.board-header p {
+  margin: 0;
+  max-width: 330px;
+  color: rgba(243,239,231,0.42);
+  line-height: 1.5;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* ðŸ”¥ THIS IS THE IMPORTANT PART */
+.rank-list {
+  display: grid;
+  gap: 14px;
+
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 10px;
+}
+
+/* Scrollbar styling */
+.rank-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.rank-list::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+}
+
+.rank-list::-webkit-scrollbar-thumb {
+  background: rgba(199,241,44,0.7);
+  border-radius: 999px;
+}
+
+.rank-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(199,241,44,1);
+}
+
+/* ========================= */
+
+.rank-row {
+  display: grid;
+  grid-template-columns: 46px 130px 1fr 88px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.025);
+}
+
+.rank-number {
+  color: rgba(243,239,231,0.26);
+  font-size: 28px;
+  font-weight: 950;
+}
+
+.rank-name {
+  font-size: 18px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.rank-bar {
+  height: 12px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rank-bar span {
+  display: block;
+  height: 100%;
+  width: var(--bar);
+  background: linear-gradient(90deg, rgba(199,241,44,0.35), #c7f12c);
+  border-radius: inherit;
+}
+
+.rank-value {
+  text-align: right;
+  color: #c7f12c;
+  font-weight: 950;
+}
+
+@media (max-width: 1000px) {
+  .data-section {
+    padding: 110px 24px 90px;
+  }
+
+  .data-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .board-header {
+    display: block;
+  }
+
+  .board-header p {
+    text-align: left;
+    margin-top: 12px;
+  }
+
+  .rank-row {
+    grid-template-columns: 36px 95px 1fr 64px;
+    gap: 10px;
+  }
+}

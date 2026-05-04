@@ -1,0 +1,258 @@
+.closet-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #111;
+}
+
+.closet-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.closet-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.58), rgba(0,0,0,0.1) 45%, rgba(0,0,0,0.3)),
+    linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
+  pointer-events: none;
+}
+
+.closet-left {
+  position: absolute;
+  top: 7%;
+  left: 4%;
+  z-index: 5;
+  color: white;
+}
+
+.closet-left h2 {
+  margin: 0;
+  font-size: clamp(38px, 5.5vw, 78px);
+  line-height: 1.05;
+  letter-spacing: 0.14em;
+  font-weight: 950;
+}
+
+.closet-left p {
+  margin-top: 26px;
+  font-size: clamp(22px, 2vw, 34px);
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.closet-right {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  z-index: 5;
+  color: white;
+  text-align: right;
+  font-size: clamp(18px, 2vw, 30px);
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.closet-logo {
+  position: absolute;
+  left: 4%;
+  bottom: 5%;
+  z-index: 5;
+  color: rgba(255,255,255,0.35);
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+}
+
+.rack-item {
+  position: absolute;
+  z-index: 10;
+  border: 1px solid rgba(255,255,255,0.34);
+  background: rgba(255,255,255,0.08);
+  cursor: pointer;
+  border-radius: 999px;
+  display: block;
+  padding: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition:
+    background 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
+}
+
+.rack-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(199,241,44,0.85);
+  background: rgba(0,0,0,0.08);
+  box-shadow: 0 0 18px rgba(199,241,44,0.35);
+}
+
+.rack-item:hover {
+  background: rgba(199,241,44,0.13);
+  border-color: rgba(199,241,44,0.9);
+  box-shadow:
+    0 0 24px rgba(199,241,44,0.65),
+    inset 0 0 20px rgba(255,255,255,0.14);
+  transform: translateY(-6px);
+}
+
+.rack-item.selected {
+  background: rgba(199,241,44,0.16);
+  border-color: rgba(199,241,44,1);
+  box-shadow:
+    0 0 32px rgba(199,241,44,0.85),
+    inset 0 0 28px rgba(255,255,255,0.18);
+}
+
+.item-1 {
+  left: 23.8%;
+  top: 29%;
+  width: 5.8%;
+  height: 47%;
+}
+
+.item-2 {
+  left: 29.8%;
+  top: 29%;
+  width: 5.8%;
+  height: 47%;
+}
+
+.item-3 {
+  left: 35.8%;
+  top: 28%;
+  width: 6%;
+  height: 49%;
+}
+
+.item-4 {
+  left: 42%;
+  top: 28%;
+  width: 6%;
+  height: 49%;
+}
+
+.item-5 {
+  left: 48.3%;
+  top: 28%;
+  width: 6%;
+  height: 49%;
+}
+
+.item-6 {
+  left: 54.5%;
+  top: 28%;
+  width: 6%;
+  height: 49%;
+}
+
+.item-7 {
+  left: 60.8%;
+  top: 29%;
+  width: 5.7%;
+  height: 46%;
+}
+
+.item-8 {
+  left: 66.6%;
+  top: 28%;
+  width: 6%;
+  height: 50%;
+}
+
+.item-9 {
+  left: 72.8%;
+  top: 28%;
+  width: 6%;
+  height: 48%;
+}
+
+.item-10 {
+  left: 79%;
+  top: 29%;
+  width: 6%;
+  height: 47%;
+}
+
+.closet-info {
+  position: absolute;
+  right: 5%;
+  bottom: 7%;
+  z-index: 20;
+  width: 370px;
+  padding: 26px;
+  border-radius: 26px;
+  color: white;
+  background: rgba(0,0,0,0.58);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.closet-info.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-label {
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  margin-bottom: 14px;
+}
+
+.closet-info h3 {
+  margin: 0 0 10px;
+  font-size: 36px;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.closet-info strong {
+  display: block;
+  color: #c7f12c;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.closet-info p {
+  margin: 0;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .closet-left h2 {
+    font-size: 38px;
+  }
+
+  .closet-info {
+    left: 5%;
+    right: 5%;
+    width: auto;
+  }
+}
