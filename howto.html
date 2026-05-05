@@ -4,6 +4,11 @@
   <title>How To Use</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/data-section.css">
+  <link rel="stylesheet" href="css/closet-section.css">
+  <link rel="stylesheet" href="css/polar-section.css">
 
   <style>
     body {
@@ -12,32 +17,404 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .pdf-container {
-      width: 100%;
-      height: calc(100vh - 70px);
-    }
+    #container {
+		position:relative;
+		width: 600px; margin:auto;
+		height: 600px;
+		border-radius: 22px; padding: 20px;
+		background-color: rgb(233, 245, 220);
+		color:rgb(15, 91, 15);
+		z-index: 1;
+	}
+	.page {
+		width: 565px; height: 500px;
+		position:absolute;
+		top:80px; left:25px;
+		border-radius: 12px; padding: 12px;
+		z-index:9;
+		overflow:hidden;
 
-    .pdf-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+	}
+
+	#snoopy {
+		width: 350px;
+		margin-left: 108px;
+	}
+
+	#sony {
+		width: 200px;
+		margin-left: 183px;
+	}
+
+	.bottombutton {
+		position:absolute; 
+		bottom: 15px;
+		margin-left: 17px;
+		width:90%;
+		border-radius: 9px;
+		color:rgb(15, 91, 15);
+		text-align: center;
+		z-index:10;
+		border: 1px solid rgb(15, 91, 15);
+	}
+	.bottombutton:hover {
+		background-color: rgb(15, 91, 15);
+		color: rgb(233, 245, 220);
+	}
+	h1 {
+		text-align:center;  height: 60px;
+		font-size: 24pt;
+	}
+
+	body {
+		background-color: rgb(76, 127, 89);
+	}
+
+	p {
+		text-align: center;
+	}
+
+	#page2 img {
+		height: 103px;
+	}
+
+	#chart {
+		padding: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 5px;
+		display: flex; 
+		justify-content: center;
+		font-size:10px;
+
+	}
+	table { 
+		background-color: lightsteelblue; 
+		border-spacing: 7px; 
+		border-radius: 5px;
+		border: 1px solid black; 
+		color: black;      
+		width: 565px;
+	}
+
+	table tbody tr td:nth-child(3) {    
+		background-color: var(--light-blue-color);  
+	}
+
+	th { 
+		background-color: var(--dark-blue-color);  
+		border: 1px solid black;
+		color: white;
+	}
+
+	td { 
+		background-color: white; 
+		margin: 33px; 
+		border: 1px solid black;
+	}
+	th, td {
+		padding: 3px; 
+	}
+	
   </style>
 </head>
 
 <body>
 
-  <div class="navbar">
-    <a href="index.html">HOME</a>
-    <a href="data.html">DATA</a>
-    <a href="closet.html">CLOSET</a>
-    <a href="impact.html">IMPACT</a>
+  <header class="topbar">
+  <div class="logo">BL<span>OO</span>M</div>
+  <nav class="nav">
+    <a href="#hero">Home</a>
+    <a href="#data">Data</a>
+    <a href="#closet">Closet</a>
+    <a href="#polar">Impact</a>
     <a href="howto.html">HOW TO USE</a>
+  </nav>
+</header>
+
+
+	<div id="container">
+		<h1>jQuery animations for headphones</h1>
+		<div class="page" id="page1">
+			<p>
+			This page will direct you through choosing a pair of headphones to suit your needs. Press continue when you are ready.
+			</p>
+
+			<img id="snoopy" src="img/snoopy1.avif">
+			
+			<div class="bottombutton" id="page1next">Continue</div>
+		</div>
+		<div class="page" id="page2">
+			<p>
+			Here are the options: 
+			</p>
+			<img id="img1" src="img/AirPods.webp">
+			<img id="img2" src="img/anker.jpg">
+			<img id="img3" src="img/bose.jpg">
+			<img id="img4" src="img/cambridge.webp">
+			<img id="img5" src="img/havit.webp">
+			<img id="img6" src="img/philips.webp">
+			<img id="img7" src="img/picun.webp">
+			<img id="img8" src="img/skull.jpg">
+			<img id="img9" src="img/sony.webp">
+			<img id="img10" src="img/sony2.webp">
+			
+			
+			<div class="bottombutton" id="page2next">Continue</div>
+
+		</div>
+
+		<div id="explain"><p>Here is a chart with all the options and stats:</p></div> 
+		<div class="page" id="page3">
+						
+			
+<div id="chart">
+  <table><thead>
+  <tr>
+    <th>Name
+    </th>
+    <th>Brand
+    </th>
+    <th>Price
+    </th>
+    <th>Battery Life</th>
+    <th>Sound Quality</th>
+    <th>Weight</th>
+    <th>ANC Y/N</th>
+    <th>Spatial Audio Y/N</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>AirPods Max</td>
+    <td>Apple</td>
+    <td>$549</td>
+    <td>20 hours</td>
+    <td>48Hz - 20000Hz</td>
+    <td>384.8 g</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Sony WH-1000XM6</td>
+    <td>Sony</td>
+    <td>$530</td>
+    <td>30 hours</td>
+    <td>4Hz - 40000Hz</td>
+    <td>254 g</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Bose QuietComfort Ultra Headphones (2nd Gen)</td>
+    <td>BOSE</td>
+    <td>$508</td>
+    <td>30 hours</td>
+    <td>20Hz - 20000Hz</td>
+    <td>265 g</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Philips Fidelio L4</td>
+    <td>Philips</td>
+    <td>$413</td>
+    <td>50 hours</td>
+    <td>7Hz - 40000Hz</td>
+    <td>n/a</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Cambridge Audio Melomania P100</td>
+    <td>Cambridge Audio</td>
+    <td>$329</td>
+    <td>100 hours</td>
+    <td>20Hz - 20000Hz</td>
+    <td>330 g</td>
+    <td>Y</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>Sony WH-ULT900N</td>
+    <td>Sony</td>
+    <td>$212</td>
+    <td>50 hours</td>
+    <td>5Hz - 20000Hz</td>
+    <td>255 g</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Skullcandy Hesh 540</td>
+    <td>Skullcandy</td>
+    <td>$153</td>
+    <td>65 hours</td>
+    <td>20Hz - 20000Hz</td>
+    <td>n/a</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Picun F8 Pro</td>
+    <td>Picun</td>
+    <td>$94</td>
+    <td>140 hours</td>
+    <td>20Hz - 20000Hz</td>
+    <td>244 g</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Havit Space S1</td>
+    <td>HAVIT</td>
+    <td>$94</td>
+    <td>100 hours</td>
+    <td>20Hz - 400000Hz</td>
+    <td>258 g</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>Anker SoundCore Life Q20 Plus</td>
+    <td>SoundCore</td>
+    <td>$86</td>
+    <td>60 hours</td>
+    <td>16Hz - 40000Hz</td>
+    <td>280 g</td>
+    <td>Y</td>
+    <td>N</td>
+  </tr>
+</tbody></table>
+</div>
+			
+			<div class="bottombutton" id="page3next">Continue</div>
+
+		</div>
+		<div class="page" id="page4">
+			<p>
+				<strong>Here are a few options:</strong>
+			</p>
+			<p>
+				Most Expensive: <strong>AirPods Max</strong> costs $549 and has a battery life of 20 hours, weighs 384.8 g, and has a frequency range of 48Hz - 20000Hz
+			</p>
+			<p>
+				Least Expensive: <strong>SoundCore Life Q20 Plus</strong> costs $86 and has a battery life of 60 hours, weighs 280 g, and has a frequency range of 16Hz - 40000Hz
+			</p>
+
+			<p>
+				<strong>This is the best choice in my opinion:</strong> the Sony WH-ULT900N costs $212 and has a battery life of 50 hours, weighs 255 g, and has a frequency range of 5Hz - 20000Hz
+			</p>
+			<p>
+				A fair price, good sound quality and capabilities, long battery life, and it's not too heavy.
+			</p>
+
+			<img id="sony" src="img/sony2.webp">
+			
+			
+			<div class="bottombutton" id="page4next">Continue</div>
+
+		</div>
+		<div class="page" id="page5">
+			<p>Hopefully this has given you a few options and helped you decide which headphones to buy.</p>
+			
+			<img id="snoopy" src="img/snoopy.jpg">
+
+			<div class="bottombutton" id="page5end">Thank you for reading!</div>
+			
+		</div>
+
   </div>
 
-  <div class="pdf-container">
-    <iframe src="data storyboards-2026-05-01-18-17.pdf"></iframe>
-  </div>
+  <script src="https://code.jquery.com/jquery.js"></script>
+	<script>
+	   $(document).ready(function(){
+		   
+			$(".page").hide();
+			$("#page1").show();
+			$("#explain").hide();
+		   		  
+		   $("#page1next").on("click", function(){
+			   $("#page1").slideUp(2000)
+			   
+			   $("#page2").show().
+			   		animate({
+				   		"top":"600px", "opacity":"0"
+			   		},0).delay(2000).
+			   		animate({
+				   		"left":"25px", "top":"80px", "opacity":"1"
+			   		},2000);
+		   })
+		   
+			$("#page2next").on("click", function(){
+			   $("#page2 img").
+			   		animate({
+				   		"height":"500px", "opacity":"0"
+			   		},2000);
+				$("#page2").
+			   		animate({
+				   		"opacity":"0"
+			   		},2000);
+				
+				$("#explain").show().
+					animate({
+						"opacity":"0"
+					}, 0).delay(3000).
+					animate({
+						"opacity":"1"
+					}, 0).delay(6000).
+					animate({
+						"opacity":"0"
+					}, 0)
+			   
+			   $("#page3").show().
+			   		animate({
+				   		"width":"0px", "opacity":"0"
+			   		},0).delay(6000).
+			   		animate({
+				   		"width":"570px", "opacity":"1"
+			   		},2000);
+			})
+
+			$("#page3next").on("click", function(){
+			   $("#page3").
+			   		animate({
+				   		"width":"0px", "opacity":"0"
+			   		},2000);
+			   
+			   $("#page4").show().
+			   		animate({
+				   		"left":"400px",  "opacity":"0"
+			   		},0).delay(2000).
+			   		animate({
+				   		"left":"25px",  "opacity":"1"
+			   		},2000);
+			})
+			$("#page4next").on("click", function(){
+			   $("#page4").
+			   		animate({
+				   		"left":"-400px", "opacity":"0"
+			   		},2000);
+			   
+			   $("#page5").show().
+			   		animate({
+				   		"font-size":"72px",  "opacity":"0"
+			   		},0).delay(2000).
+			   		animate({
+				   		"font-size":"16px",  "opacity":"1"
+			   		},2000);
+
+				$("#page5 .bottombutton").
+					animate({
+						"bottom":"500px"
+				},0).delay(2000).
+					animate({
+						"bottom": "15px"
+				},2000)
+			})
+
+		  
+	   });
+	 </script>
 
 </body>
 </html>
