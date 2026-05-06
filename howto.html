@@ -18,104 +18,238 @@
     }
 
     #container {
-		position:relative;
-		width: 600px; margin:auto;
-		height: 600px;
-		border-radius: 22px; padding: 20px;
-		background-color: rgb(233, 245, 220);
-		color:rgb(15, 91, 15);
+		position: relative;
+		width: 645px; margin: auto;
+		height: 422px;
+		background-color: #c7f12c;
+		color:#c7f12c;
 		z-index: 1;
+		border: 2px solid #c7f12c;
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		
 	}
 	.page {
-		width: 565px; height: 500px;
-		position:absolute;
-		top:80px; left:25px;
-		border-radius: 12px; padding: 12px;
+		width: 640px;
+		height: 416px;
+		position: absolute;
 		z-index:9;
-		overflow:hidden;
-
+		overflow: hidden;
+		display: grid;
+		align-items: center;
 	}
 
-	#snoopy {
-		width: 350px;
-		margin-left: 108px;
+	.spacer {
+		height: 80px;
+		width: 100%;
 	}
 
-	#sony {
-		width: 200px;
-		margin-left: 183px;
+	.title {
+		text-align: center;
+		padding: 20px;
 	}
 
 	.bottombutton {
-		position:absolute; 
-		bottom: 15px;
-		margin-left: 17px;
-		width:90%;
-		border-radius: 9px;
-		color:rgb(15, 91, 15);
+		position: absolute; 
+		bottom: 0;
+		width: 100%;
+		color: #c7f12c;
 		text-align: center;
-		z-index:10;
-		border: 1px solid rgb(15, 91, 15);
+		z-index: 10;
+		padding: 8px;
+		background-color: #000;
+		text-decoration: none;
+		font-size: 10px;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		transition: color 0.2s ease;
 	}
+
+	.topbutton {
+		position: absolute; 
+		height: 25px;
+		top: 0;
+		width: 120px;
+		left: 260px;
+		color: #c7f12c;
+		text-align: center;
+		z-index: 10;
+		padding: 8px;
+		background-color: #000;
+		text-decoration: none;
+		font-size: 10px;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		transition: color 0.2s ease;
+	}
+
+	.topbutton:hover {
+		background-color: #c7f12c;
+		color: #000;
+		cursor: pointer;
+	}
+
 	.bottombutton:hover {
-		background-color: rgb(15, 91, 15);
-		color: rgb(233, 245, 220);
+		background-color: #c7f12c;
+		color: #000;
+		cursor: pointer;
 	}
+
 	h1 {
 		text-align:center;  height: 60px;
 		font-size: 24pt;
-	}
-
-	body {
-		background-color: rgb(76, 127, 89);
 	}
 
 	p {
 		text-align: center;
 	}
 
-	#page2 img {
-		height: 103px;
-	}
 
-	#chart {
-		padding: 10px;
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 5px;
-		display: flex; 
-		justify-content: center;
-		font-size:10px;
-
-	}
-	table { 
-		background-color: lightsteelblue; 
-		border-spacing: 7px; 
-		border-radius: 5px;
-		border: 1px solid black; 
-		color: black;      
-		width: 565px;
-	}
-
-	table tbody tr td:nth-child(3) {    
-		background-color: var(--light-blue-color);  
-	}
-
-	th { 
-		background-color: var(--dark-blue-color);  
-		border: 1px solid black;
-		color: white;
-	}
-
-	td { 
-		background-color: white; 
-		margin: 33px; 
-		border: 1px solid black;
-	}
-	th, td {
-		padding: 3px; 
+	img {
+		width: 640px;
+		height: 416px;
 	}
 	
+	.explore a {
+		color: rgba(243, 239, 231, 0.55);
+		text-decoration: none;
+		font-size: 26px;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		transition: color 0.2s ease;
+		background-color: #000;
+		text-align: center;
+		width: 645px; margin: auto;
+		height: 422px;
+		padding-top: 198px;
+	}
+
+	.explore a:hover {
+		color: #c7f12c;
+	}
+
+	.arrow {
+		color: #ff4500;     
+		font-size: 3rem; 
+		font-weight: bold; 
+		line-height: 1;  
+	}
+
+	.highlightbox {
+		border: 2px solid #c7f12c;
+		position: absolute;
+		animation: slowfade 2s ease-in forwards;
+		opacity: 0;
+		height: 20px;
+		&.home {
+			width: 40px;
+			top: 25px;
+			right: 238px;
+		}
+		&.data {
+			width: 40px;
+			top: 25px;
+			right: 195px;
+		}
+		&.closet {
+			width: 50px;
+			top: 25px;
+			right: 143px;
+		}
+		&.impact {
+			width: 46px;
+			top: 25px;
+			right: 92px;
+		}
+	}
+
+	.infobox {
+		border: 2px solid #c7f12c;
+		position: absolute;
+		color: #000;
+		text-decoration: none;
+		font-size: 12px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		transition: color 0.2s ease;
+		background-color: #f3efe7;
+		text-align: left;
+		padding: 5px;
+		animation: slowfade 2.5s ease-in forwards;
+		opacity: 0;
+		box-shadow: 0 0 10px 5px #c7f12c;
+		&.home {
+			width: 175px;
+			top: 70px;
+			left: 25px;
+		}
+		&.data1 {
+			width: 175px;
+			top: 60px;
+			left: 420px;
+		}
+		&.data2 {
+			width: 175px;
+			top: 290px;
+			left: 350px;
+		}
+		&.data3 {
+			width: 175px;
+			top: 175px;
+			left: 350px;
+		}
+		&.data4 {
+			width: 180px;
+			top: 120px;
+			left: 10px;
+		}
+		&.data5 {
+			width: 180px;
+			top: 310px;
+			left: 390px;
+		}
+		&.closet1 {
+			width: 150px;
+			top: 75px;
+			left: 470px;
+		}
+		&.closet2 {
+			width: 150px;
+			top: 325px;
+			left: 440px;
+		}
+		&.closet3 {
+			width: 150px;
+			top: 225px;
+			left: 50px;
+		}
+		&.impact1 {
+			width: 220px;
+			top: 240px;
+			left: 37px;
+		}
+		&.impact2 {
+			width: 220px;
+			top: 60px;
+			left: 400px;
+		}
+		&.impact3 {
+			width: 30px;
+			top: 355px;
+			left: 300px;
+		}
+	}
+
+	@keyframes slowfade {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
   </style>
 </head>
 
@@ -124,206 +258,128 @@
   <header class="topbar">
   <div class="logo">BL<span>OO</span>M</div>
   <nav class="nav">
-    <a href="#hero">Home</a>
-    <a href="#data">Data</a>
-    <a href="#closet">Closet</a>
-    <a href="#polar">Impact</a>
+    <a href="index.html">EXPLORE PAGE</a>
     <a href="howto.html">HOW TO USE</a>
   </nav>
 </header>
 
+<div class="spacer"></div>
+<div class="headline title">
+    <span class="word reality">How to Use bloom</span>
+  </div>
 
 	<div id="container">
-		<h1>jQuery animations for headphones</h1>
 		<div class="page" id="page1">
-			<p>
-			This page will direct you through choosing a pair of headphones to suit your needs. Press continue when you are ready.
-			</p>
 
-			<img id="snoopy" src="img/snoopy1.avif">
+			<img src="images/Screenshot 1.png">
 			
-			<div class="bottombutton" id="page1next">Continue</div>
-		</div>
+			<div class="highlightbox home"></div>
+			<div class="infobox home">this is the homepage where you will begin your journey. Click the arrow at the bottom to start walkthrough.</div>
+			<div class="bottombutton next" id="page1next">&darr; next &darr;</div>
+		</div> 
 		<div class="page" id="page2">
-			<p>
-			Here are the options: 
-			</p>
-			<img id="img1" src="img/AirPods.webp">
-			<img id="img2" src="img/anker.jpg">
-			<img id="img3" src="img/bose.jpg">
-			<img id="img4" src="img/cambridge.webp">
-			<img id="img5" src="img/havit.webp">
-			<img id="img6" src="img/philips.webp">
-			<img id="img7" src="img/picun.webp">
-			<img id="img8" src="img/skull.jpg">
-			<img id="img9" src="img/sony.webp">
-			<img id="img10" src="img/sony2.webp">
-			
-			
-			<div class="bottombutton" id="page2next">Continue</div>
 
-		</div>
-
-		<div id="explain"><p>Here is a chart with all the options and stats:</p></div> 
+			<img src="images/Screenshot 2.png">
+			
+			<div class="highlightbox data"></div>
+			<div class="infobox data1">here you can click through different data metrics to explore the impact per dollar for various brands.</div>
+			<div class="infobox data2">The carbon released per dollar spent will appear ranked by brand here.</div>
+			<div class="topbutton previous" id="page2previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next2" id="page2next">&darr; next &darr;</div>
+		</div> 
 		<div class="page" id="page3">
-						
-			
-<div id="chart">
-  <table><thead>
-  <tr>
-    <th>Name
-    </th>
-    <th>Brand
-    </th>
-    <th>Price
-    </th>
-    <th>Battery Life</th>
-    <th>Sound Quality</th>
-    <th>Weight</th>
-    <th>ANC Y/N</th>
-    <th>Spatial Audio Y/N</th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td>AirPods Max</td>
-    <td>Apple</td>
-    <td>$549</td>
-    <td>20 hours</td>
-    <td>48Hz - 20000Hz</td>
-    <td>384.8 g</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Sony WH-1000XM6</td>
-    <td>Sony</td>
-    <td>$530</td>
-    <td>30 hours</td>
-    <td>4Hz - 40000Hz</td>
-    <td>254 g</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Bose QuietComfort Ultra Headphones (2nd Gen)</td>
-    <td>BOSE</td>
-    <td>$508</td>
-    <td>30 hours</td>
-    <td>20Hz - 20000Hz</td>
-    <td>265 g</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Philips Fidelio L4</td>
-    <td>Philips</td>
-    <td>$413</td>
-    <td>50 hours</td>
-    <td>7Hz - 40000Hz</td>
-    <td>n/a</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Cambridge Audio Melomania P100</td>
-    <td>Cambridge Audio</td>
-    <td>$329</td>
-    <td>100 hours</td>
-    <td>20Hz - 20000Hz</td>
-    <td>330 g</td>
-    <td>Y</td>
-    <td>N</td>
-  </tr>
-  <tr>
-    <td>Sony WH-ULT900N</td>
-    <td>Sony</td>
-    <td>$212</td>
-    <td>50 hours</td>
-    <td>5Hz - 20000Hz</td>
-    <td>255 g</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Skullcandy Hesh 540</td>
-    <td>Skullcandy</td>
-    <td>$153</td>
-    <td>65 hours</td>
-    <td>20Hz - 20000Hz</td>
-    <td>n/a</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Picun F8 Pro</td>
-    <td>Picun</td>
-    <td>$94</td>
-    <td>140 hours</td>
-    <td>20Hz - 20000Hz</td>
-    <td>244 g</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Havit Space S1</td>
-    <td>HAVIT</td>
-    <td>$94</td>
-    <td>100 hours</td>
-    <td>20Hz - 400000Hz</td>
-    <td>258 g</td>
-    <td>Y</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>Anker SoundCore Life Q20 Plus</td>
-    <td>SoundCore</td>
-    <td>$86</td>
-    <td>60 hours</td>
-    <td>16Hz - 40000Hz</td>
-    <td>280 g</td>
-    <td>Y</td>
-    <td>N</td>
-  </tr>
-</tbody></table>
-</div>
-			
-			<div class="bottombutton" id="page3next">Continue</div>
 
-		</div>
+			<img src="images/Screenshot 3.png">
+			
+			<div class="highlightbox data"></div>
+			<div class="infobox data4">Notice the selected data metric has changed. &darr;</div>
+			<div class="infobox data3">The water wasted per dollar spent will appear ranked by brand here.</div>
+			<div class="topbutton previous2" id="page3previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next2" id="page3next">&darr; next &darr;</div>
+		</div> 
 		<div class="page" id="page4">
-			<p>
-				<strong>Here are a few options:</strong>
-			</p>
-			<p>
-				Most Expensive: <strong>AirPods Max</strong> costs $549 and has a battery life of 20 hours, weighs 384.8 g, and has a frequency range of 48Hz - 20000Hz
-			</p>
-			<p>
-				Least Expensive: <strong>SoundCore Life Q20 Plus</strong> costs $86 and has a battery life of 60 hours, weighs 280 g, and has a frequency range of 16Hz - 40000Hz
-			</p>
 
-			<p>
-				<strong>This is the best choice in my opinion:</strong> the Sony WH-ULT900N costs $212 and has a battery life of 50 hours, weighs 255 g, and has a frequency range of 5Hz - 20000Hz
-			</p>
-			<p>
-				A fair price, good sound quality and capabilities, long battery life, and it's not too heavy.
-			</p>
+			<img src="images/Screenshot 4.png">
 
-			<img id="sony" src="img/sony2.webp">
-			
-			
-			<div class="bottombutton" id="page4next">Continue</div>
-
-		</div>
+			<div class="highlightbox data"></div>
+			<div class="infobox data4">Notice the selected data metric has changed. &darr;</div>
+			<div class="infobox data3">The textile waste generated per dollar spent will appear ranked by brand here.</div>
+			<div class="topbutton previous2" id="page4previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next2" id="page4next">&darr; next &darr;</div>
+		</div> 
 		<div class="page" id="page5">
-			<p>Hopefully this has given you a few options and helped you decide which headphones to buy.</p>
-			
-			<img id="snoopy" src="img/snoopy.jpg">
 
-			<div class="bottombutton" id="page5end">Thank you for reading!</div>
+			<img src="images/Screenshot 5.png">
 			
+			<div class="highlightbox data"></div>
+			<div class="infobox data3">The textile waste generated per dollar spent will appear ranked by brand here.</div>
+			<div class="infobox data5">scroll through up to 25 brands for each metric. &rarr;</div>
+			<div class="topbutton previous2" id="page5previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next" id="page5next">&darr; next &darr;</div>
+		</div> 
+		<div class="page" id="page6">
+
+			<img src="images/Screenshot 6.png">
+			
+			<div class="highlightbox closet"></div>
+			<div class="infobox closet1">here you can explore different items to see their impact on the environment and tips to minimize it.</div>
+			<div class="infobox closet2">information and tips will appear here.</div>
+			<div class="topbutton previous" id="page6previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next2" id="page6next">&darr; next &darr;</div>
+		</div> 
+		<div class="page" id="page7">
+
+			<img src="images/Screenshot 7.png">
+			
+			<div class="highlightbox closet"></div>
+			<div class="infobox closet1">here you can explore different items to see their impact on the environment and tips to minimize it.</div>
+			<div class="infobox closet2">information and tips will appear here.</div>
+			<div class="infobox closet3">notice how the selected item has changed, &rarr; you can do this with a simple click.</div>
+			<div class="topbutton previous2" id="page7previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next" id="page7next">&darr; next &darr;</div>
+		</div> 
+		<div class="page" id="page8">
+
+			<img src="images/Screenshot 8.png">
+			
+			<div class="highlightbox impact"></div>
+			<div class="infobox impact1">here you can see the impact of your fashion choices on the environment and wildlife by sliding the bar. &darr;</div>
+			<div class="topbutton previous" id="page8previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next2" id="page8next">&darr; next &darr;</div>
+		</div> 
+		<div class="page" id="page9">
+
+			<img src="images/Screenshot 9.png">
+			
+			<div class="highlightbox impact"></div>
+			<div class="infobox impact1">here you can see the impact of your fashion choices on the environment and wildlife by sliding the bar. &darr;</div>
+			<div class="infobox impact2">notice that the further the bar slides, the more the iceberg melts and the polar bear sinks. &darr;</div>
+			<div class="infobox impact3">&larr;</div>
+			<div class="topbutton previous2" id="page9previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next2" id="page9next">&darr; next &darr;</div>
 		</div>
+		<div class="page" id="page10">
 
-  </div>
+			<img src="images/Screenshot 10.png">
+			
+			<div class="highlightbox impact"></div>
+			<div class="infobox impact1">here you can see the impact of your fashion choices on the environment and wildlife by sliding the bar. &darr;</div>
+			<div class="infobox impact2">notice that the further the bar slides, the more the iceberg melts and the polar bear sinks. &darr;</div>
+			<div class="infobox impact3">&larr;</div>
+			<div class="topbutton previous2" id="page10previous">&uarr; previous &uarr;</div>
+			<div class="bottombutton next" id="page10next">&darr; next &darr;</div>
+		</div>
+		<div class="page explore" id="page11">
+
+			<a href="index.html">EXPLORE BLOOM</a>
+			
+			<div class="topbutton previous" id="page11previous">&uarr; previous &uarr;</div>
+		</div>
+		
+	</div>
+
+
+<div class="spacer"></div>
 
   <script src="https://code.jquery.com/jquery.js"></script>
 	<script>
@@ -333,86 +389,62 @@
 			$("#page1").show();
 			$("#explain").hide();
 		   		  
-		   $("#page1next").on("click", function(){
-			   $("#page1").slideUp(2000)
-			   
-			   $("#page2").show().
-			   		animate({
-				   		"top":"600px", "opacity":"0"
-			   		},0).delay(2000).
-			   		animate({
-				   		"left":"25px", "top":"80px", "opacity":"1"
-			   		},2000);
-		   })
-		   
-			$("#page2next").on("click", function(){
-			   $("#page2 img").
-			   		animate({
-				   		"height":"500px", "opacity":"0"
-			   		},2000);
-				$("#page2").
-			   		animate({
-				   		"opacity":"0"
-			   		},2000);
+		   $(".next").on("click", function() {
+				const $current = $(this).closest(".page");
+				const $next = $current.next(".page");
+
+				if ($next.length) {
+					$current.animate({ "top": "-100%", "opacity": "0" }, 1000, function() {
+						$(this).hide();
+					});
+
+					$next.show().css({ "top": "100%", "opacity": "0" })
+						.animate({ "top": "0%", "opacity": "1" }, 1000);
 				
-				$("#explain").show().
-					animate({
-						"opacity":"0"
-					}, 0).delay(3000).
-					animate({
-						"opacity":"1"
-					}, 0).delay(6000).
-					animate({
-						"opacity":"0"
-					}, 0)
-			   
-			   $("#page3").show().
-			   		animate({
-				   		"width":"0px", "opacity":"0"
-			   		},0).delay(6000).
-			   		animate({
-				   		"width":"570px", "opacity":"1"
-			   		},2000);
-			})
+				}
+			});
 
-			$("#page3next").on("click", function(){
-			   $("#page3").
-			   		animate({
-				   		"width":"0px", "opacity":"0"
-			   		},2000);
-			   
-			   $("#page4").show().
-			   		animate({
-				   		"left":"400px",  "opacity":"0"
-			   		},0).delay(2000).
-			   		animate({
-				   		"left":"25px",  "opacity":"1"
-			   		},2000);
-			})
-			$("#page4next").on("click", function(){
-			   $("#page4").
-			   		animate({
-				   		"left":"-400px", "opacity":"0"
-			   		},2000);
-			   
-			   $("#page5").show().
-			   		animate({
-				   		"font-size":"72px",  "opacity":"0"
-			   		},0).delay(2000).
-			   		animate({
-				   		"font-size":"16px",  "opacity":"1"
-			   		},2000);
+			$(".previous").on("click", function() {
+				const $current = $(this).closest(".page");
+				const $prev = $current.prev(".page");
 
-				$("#page5 .bottombutton").
-					animate({
-						"bottom":"500px"
-				},0).delay(2000).
-					animate({
-						"bottom": "15px"
-				},2000)
-			})
+				if ($prev.length) {
+					$current.animate({ "top": "100%", "opacity": "0" }, 1000, function() {
+						$(this).hide();
+					});
 
-		  
+					$prev.show().css({ "top": "-100%", "opacity": "0" })
+						.animate({ "top": "0%", "opacity": "1" }, 1000);
+				}
+			});
+
+			$(".next2").on("click", function() {
+				const $current = $(this).closest(".page");
+				const $next = $current.next(".page");
+
+				if ($next.length) {
+					$current.animate({ "opacity": "0" }, function() {
+						$(this).hide();
+					});
+
+					$next.show().css({ "opacity": "0" })
+						.animate({ "opacity": "1" });
+				}
+			});
+
+			$(".previous2").on("click", function() {
+				const $current = $(this).closest(".page");
+				const $prev = $current.prev(".page");
+
+				if ($prev.length) {
+					$current.animate({ "opacity": "0" }, function() {
+						$(this).hide();
+					});
+
+					$prev.show().css({ "opacity": "0" })
+						.animate({ "opacity": "1" });
+				}
+			});
 	   });
 	 </script>
 
